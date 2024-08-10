@@ -8,6 +8,10 @@
 
 **详细虚拟机教程可以自行查找学习。**
 
+**`注意：下载好虚拟机请自行修改CPU核心数和内存等，根据自己电脑配置修改即可。如遇到黑屏无法进入系统，可以关闭显示器设置里的加速3D图形`**
+
+![image-20240810153205513](./assets/image-20240810153205513.png)
+
 
 
 `Github`开源地址：
@@ -59,7 +63,7 @@ password: XAUTCTF@
 
 基础环境：
 
-`openssh-server` `gedit` `docker` `gcc` `g++` `java8` `java11` `java17` `java21` `anaconda3` `golang` `rust` `proxychains4` `vscode` `tmux`
+`openssh-server` `gedit` `docker` `gcc` `g++` `java8` `java11` `java17` `java21` `anaconda3` `golang` `rust` `proxychains4` `vscode` `tmux` `p7zip-full`
 
 PWN环境：
 
@@ -67,7 +71,7 @@ PWN环境：
 
 WEB环境：
 
-`fscan` `nmap` `sqlmap` `msfconsole` `jDumpSpider` `fenjing` `impacket` `dirsearch` `john` `gobuster` `wfuzz` `faketime` `BloodHound` `searchsploit` `evil-winrm` `rogue_mysql_server` `ysoserial-all.jar`
+`fscan` `nmap` `sqlmap` `msfconsole` `jDumpSpider` `fenjing` `impacket` `dirsearch` `john` `gobuster` `wfuzz` `faketime` `BloodHound` `searchsploit` `evil-winrm` `rogue_mysql_server` `ysoserial-all.jar` `kerbrute` `frp` `EarthWorm`
 
 MISC环境：
 
@@ -349,6 +353,22 @@ bloodhound --no-sandbox
 `ysoserial-all.jar`:
 
 ![image-20240810150851015](./assets/image-20240810150851015.png)
+
+
+
+#### `kerbrute`:
+
+![image-20240810155140024](./assets/image-20240810155140024.png)
+
+#### `frp`:
+
+![image-20240810160356113](./assets/image-20240810160356113.png)
+
+
+
+#### `EarthWorm`:
+
+![image-20240810160520957](./assets/image-20240810160520957.png)
 
 
 
