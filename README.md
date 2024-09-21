@@ -8,20 +8,18 @@
 
 - 对应文件夹中分别有`Ubuntu24.04_ovf.zip`和`Ubuntu24.04.zip`文件，可以选择`任意一个`下载
 
-- `Ubuntu24.04_ovf.zip`文件解压后需要通过VMWare导入`ovf`文件即可。`Ubuntu24.04.zip`文件则解压通过VMware打开`vmx`文件即可。
+- `Ubuntu24.04_ovf.zip`文件解压后需要通过VMWare导入`ovf`
+
+- `f`文件即可。`Ubuntu24.04.zip`文件则解压通过VMware打开`vmx`文件即可。
 
 - 其中`iso`文件夹中的`iso`文件，是`Ubuntu24.04`的系统镜像文件。
 - **详细虚拟机教程可以自行查找学习。**
 
-
-
 **由于最新上传的版本磁盘较大，下载可能会比较慢，所以可以对照着`工具列表速览`自行安装对应工具。后续大概率不会再打包整个环境（因为从导出到压缩再上传也很费时间），只会同步更新工具列表和下载方式，供大家学习。**
 
+> **！！！！注意！！！！：下载好虚拟机请自行修改CPU核心数和内存等，根据自己电脑配置修改为建议大小即可。如遇到黑屏无法进入系统，可以关闭显示器设置里的加速3D图形！**
 
-
-**`！！！！注意！！！！：下载好虚拟机请自行修改CPU核心数和内存等，根据自己电脑配置修改为建议大小即可。如遇到黑屏无法进入系统，可以关闭显示器设置里的加速3D图形`**
-
-![image-20240810153205513](./assets/image-20240810153205513.png)
+![image-20240824154346191](./assets/image-20240824154346191.png)
 
 
 
@@ -31,7 +29,7 @@
 https://github.com/c0mentropy/CTF_Ubuntu24.04
 ```
 
-
+<u>觉得不错还希望动动小手点一个star，这对我来说真的非常重要╰(✿´⌣`✿)╯♡ 感谢！</u>
 
 下载链接：
 
@@ -39,7 +37,6 @@ https://github.com/c0mentropy/CTF_Ubuntu24.04
 通过百度网盘分享的文件：Ubuntu24.04_CTF
 链接：https://pan.baidu.com/s/1OVxcDnNX6VmzNlku7m_tFQ?pwd=XAUT 
 提取码：XAUT 
---来自百度网盘超级会员V3的分享
 ```
 
 
@@ -64,9 +61,7 @@ password: XAUTCTF@
 
 用户名密码大家可以自行修改。
 
-
-
-**`特别说明：截止到我打包环境，我只想到了这些常用工具，后续有其他工具会再同步更新，或者大家也可以自行下载。而且为了避免环境太乱，所以只是大概测试了环境功能，如果有任何bug可以联系我，或自行修改。`**
+> **特别说明**：截止到我打包环境，我只想到了这些常用工具，后续有其他工具会再同步更新，或者大家也可以自行下载。而且为了避免环境太乱，所以只是大概测试了环境功能，如果有任何bug可以联系我，或自行修改！
 
 
 
@@ -74,7 +69,7 @@ password: XAUTCTF@
 
 基础环境：
 
-`openssh-server` `gedit` `docker` `gcc` `g++` `java8` `java11` `java17` `java21` `anaconda3` `golang` `rust` `proxychains4` `vscode` `tmux` `p7zip-full`
+`openssh-server` `gedit` `docker` `gcc` `g++` `java8` `java11` `java17` `java21` `anaconda3` `golang` `rust` `proxychains4` `vscode` `tmux` `p7zip-full` `mingw-w64`
 
 PWN环境：
 
@@ -82,7 +77,7 @@ PWN环境：
 
 WEB环境：
 
-`fscan` `nmap` `sqlmap` `msfconsole` `jDumpSpider` `fenjing` `impacket` `dirsearch` `john` `gobuster` `wfuzz` `faketime` `BloodHound` `searchsploit` `evil-winrm` `rogue_mysql_server` `ysoserial-all.jar` `kerbrute` `frp` `EarthWorm`
+`fscan` `nmap` `sqlmap` `msfconsole` `jDumpSpider` `fenjing` `impacket` `dirsearch` `john` `gobuster` `wfuzz` `faketime` `BloodHound` `searchsploit` `evil-winrm` `rogue_mysql_server` `ysoserial-all.jar` `kerbrute` `frp` `EarthWorm` `burpsuite` `AntSword` `reverseshell` `pwncat` `hashcat` `swaks` `smbclient` `PowerSploit` `CrackMapExec`
 
 MISC环境：
 
@@ -91,8 +86,6 @@ MISC环境：
 CRYPTO环境：
 
 `gmpy2` `pycryptodome` `pwntools` `sage` 
-
-
 
 
 
@@ -156,7 +149,11 @@ p4 curl www.google.com
 
 ![image-20240808192724567](./assets/image-20240808192724567.png)
 
+#### `mingw-w64`:
 
+![image-20240919233301297](./assets/image-20240919233301297.png)
+
+![image-20240919233401455](./assets/image-20240919233401455.png)
 
 
 
@@ -216,8 +213,6 @@ conda activate pwn
 
 具体使用如下：
 
-
-
 #### `conda activate web`:
 
 大部分工具均为python开发，所以使用web工具时建议进入web的python环境
@@ -261,6 +256,8 @@ conda activate web
 ![image-20240804190429229](./assets/image-20240804190429229.png)
 
 #### `Impacket`:
+
+
 
 | 类型         | 脚本名             | 脚本介绍                                                     |
 | ------------ | ------------------ | ------------------------------------------------------------ |
@@ -315,11 +312,17 @@ conda activate web
 
 ##### `neo4j`
 
+```bash
+sudo neo4j console
+```
+
+
+
 ![image-20240810132421807](./assets/image-20240810132421807.png)
 
 访问网址：http://localhost:7474/browser/
 
-用户名密码：`neo4j/XAUTCTF@ `
+用户名密码：`neo4j/XAUTCTF@`
 
 ![image-20240810132446717](./assets/image-20240810132446717.png)
 
@@ -342,6 +345,10 @@ bloodhound --no-sandbox
 ##### `bloodhound-python`
 
 ![image-20240810134646124](./assets/image-20240810134646124.png)
+
+##### `SharpHound`:
+
+![image-20240920003638096](./assets/image-20240920003638096.png)
 
 
 
@@ -382,6 +389,56 @@ bloodhound --no-sandbox
 #### `EarthWorm`:
 
 ![image-20240810160520957](./assets/image-20240810160520957.png)
+
+
+
+#### `burpsuite`:
+
+![image-20240811223439590](./assets/image-20240811223439590.png)
+
+![image-20240811223509396](./assets/image-20240811223509396.png)
+
+
+
+#### `AntSword`:
+
+![image-20240811223707994](./assets/image-20240811223707994.png)
+
+
+
+#### `reverse_shell`:
+
+来自谢队的一键反弹shell工具，目标机有curl即可，覆盖Linux, Mac和Windows
+
+![image-20240812102544255](./assets/image-20240812102544255.png)
+
+
+
+#### `pwncat`:
+
+![image-20240812131432654](./assets/image-20240812131432654.png)
+
+
+
+#### `hashcat`:
+
+![image-20240819132451504](./assets/image-20240819132451504.png)
+
+#### `swaks`:
+
+![image-20240919225720644](./assets/image-20240919225720644.png)
+
+#### `smbclient`:
+
+![image-20240919230432027](./assets/image-20240919230432027.png)
+
+#### `PowerSploit`:
+
+![image-20240921113816411](./assets/image-20240921113816411.png)
+
+#### `CrackMapExec`:
+
+![image-20240921195703848](./assets/image-20240921195703848.png)
 
 
 
@@ -439,13 +496,13 @@ file:///home/xaut/Tools/misc_tools/CyberChef/CyberChef_v10.19.0.html
 conda activate crypto
 ```
 
-
-
 ![image-20240803122713551](./assets/image-20240803122713551.png)
 
 #### `sage`:
 
 `sage`是单独装在`conda activate sage`里的
+
+> 这里还是建议在sage环境里把`gmpy2` `pycryptodome` `pwntools`这些密码学常用库也装上，有时候代码或许要同时使用sage和其他密码学库
 
 ![image-20240803122835132](./assets/image-20240803122835132.png)
 
@@ -461,6 +518,11 @@ conda activate crypto
 
 作者：ckyan
 
-创建日期：2024.08.02 
+开源协议：[GPL-3.0 license](https://github.com/c0mentropy/CTF_Ubuntu24.04#)
 
-更新日期：2024.08.10
+系统创建日期：2024.08.02 
+
+环境更新日期：2024.08.10
+
+文档更新日期：2024.09.21
+
